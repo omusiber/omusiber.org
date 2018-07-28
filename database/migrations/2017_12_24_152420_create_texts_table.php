@@ -15,8 +15,8 @@ class CreateTextsTable extends Migration
     {
         Schema::create('texts', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('about_us_body');
-            $table->text('subscribe_body');
+            $table->text('about_us_body')->nullable();
+            $table->text('subscribe_body')->nullable();
             $table->timestamps();
         });
     }

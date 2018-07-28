@@ -1,5 +1,12 @@
 $(window).load(function(){
     $('.one-page').onePageNav();
+    $(document).on('click', '#slide-972-layer-3 a[href^="#"]', function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 750);
+    });
+    
 });
 
 var homeSlider,
@@ -11,7 +18,7 @@ jq(document).ready(function() {
     }else{
         homeSlider = jq("#welcome").show().revolution({
             sliderType:"hero",
-            jsFileLocation:"{{asset('assets/revolution/js/')}}",
+            jsFileLocation:"/assets/revolution/js/",
             sliderLayout:"fullscreen",
             dottedOverlay:"none",
             delay:9000,

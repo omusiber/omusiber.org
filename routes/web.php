@@ -72,3 +72,6 @@ Route::group(['prefix' => 'docs'],function (){
 
 /* CTF */
 Route::get('ctf', 'IndexController@ctf');
+
+/* TEST */
+Route::get('test', 'IndexController@testpage');

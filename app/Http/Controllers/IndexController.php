@@ -46,4 +46,8 @@ class IndexController extends Controller
     public function ctf(){
         return view('ctf');
     }
+
+    public function testpage(){
+        return view('test');
+    }
 }
