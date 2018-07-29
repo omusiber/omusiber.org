@@ -6,6 +6,7 @@
                 {{ content }}
             </p>
         </div>
+        <!--
         <div class="container">
             <div class="row teammates">
                 <div class="col-md-3 col-md-offset-3" v-for="person in team">
@@ -36,12 +37,13 @@
 
             </div>
         </div>
+        -->
     </div>
 </template>
 
 <script>
     export default {
-        props: ['header', 'content', 'team'],
+        props: ['header', 'content' /*'team'*/],
         data(){
             return {
 

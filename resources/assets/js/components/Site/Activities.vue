@@ -1,98 +1,113 @@
 <template>
-    <div class="activities">
-        <h3 class="uppercase lg-title content-title">
-            <span class="titles">Etkinliklerimiz</span>
-        </h3>
-        <div class="no-padding">
-            <div class="row-eq-height">
-                <div class="col-md-5"></div>
-
-                <div class="col-md-2">
-                    <div class="center-v-menu">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><h4><a href="#vision" role="tab" data-toggle="tab"><i class="fa fa-eye font-30 main-color clear-icon"></i>Our Company Vision</a></h4></li>
-                            <li role="presentation"><h4><a href="#mission" role="tab" data-toggle="tab"><i class="fa fa-clock-o font-30 main-color clear-icon"></i>Our Company Mission</a></h4></li>
-                            <li role="presentation"><h4><a href="#strategy" role="tab" data-toggle="tab"><i class="fa fa-gears font-30 main-color clear-icon"></i>Our Company Strategy</a></h4></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-5"></div>
-            </div>
-
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="vision">
-                    <div class="row-eq-height">
-                        <div class="col-md-5 md-padding gry-bg pattern-3">
-                            <div class="tbl tbl-70">
-                                <div class="heading style3">
-                                    <h3 class="uppercase">Our Company <span class="main-color bolder">Vision</span></h3>
-                                    <p>It is BOOKRA that change your life style</p>
-                                </div>
-                                <p class="t-justify lg-txt">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="col-md-2"><div class="dash-bord"></div></div>
-                        <div class="col-md-5 md-padding" style="background:url('assets/images/bgs/education.jpg') no-repeat 0 0;background-size: cover;"></div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="mission">
-                    <div class="row-eq-height">
-
-                        <div class="col-md-5 md-padding" style="background:url('assets/images/bgs/girl.jpg') no-repeat 0 0;background-size: cover;"></div>
-                        <div class="col-md-2"><div class="dash-bord"></div></div>
-                        <div class="col-md-5 md-padding gry-bg pattern-2">
-                            <div class="tbl tbl-70">
-                                <div class="heading style3">
-                                    <h3 class="uppercase">Our Company <span class="main-color bolder">Mission</span></h3>
-                                    <p>It is BOOKRA that change your life style</p>
-                                </div>
-                                <p class="t-justify lg-txt">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="strategy">
-                    <div class="row-eq-height">
-                        <div class="col-md-5 md-padding gry-bg pattern-1">
-                            <div class="tbl tbl-70">
-                                <div class="heading style3">
-                                    <h3 class="uppercase">Our Company <span class="main-color bolder">Strategy</span></h3>
-                                    <p>It is BOOKRA that change your life style</p>
-                                </div>
-                                <p class="t-justify lg-txt">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="col-md-2"><div class="dash-bord"></div></div>
-                        <div class="col-md-5 md-padding" style="background:url('assets/images/blog/large/1.jpg') no-repeat 0 0"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+  <div id="activities">
+		<div class="heading main centered">
+			<h3 class="uppercase lg-title"><span class="titles">{{ header }}</span></h3>
+		</div>
+		<div class="container">
+			<div class="row row-eq-height">
+				<div class="col-md-12 md-padding main-content">
+					<div class="blog-posts timeline full">
+						<div class="post-item">
+							<div class="timeline_date">
+									<span class="inner_date main-bg">
+										<span class="day">16</span>
+										<span class="month">Mart</span>
+									</span>
+								<span class="year">2018</span>
+							</div>
+							<article class="post-content">
+								<div class="post-image main-border bot-4-border">
+									<a href="#">
+										<img src="https://pbs.twimg.com/media/DXnJM2FX4AA0jo8.png:large" alt="YinYang'18">
+									</a>
+								</div>
+								<div class="post-item-rit">
+									<div class="post-info-container">
+										<div class="post-info">
+											<h4><a href="#">YinYang'18</a></h4>
+											<ul class="post-meta">
+												<li><i class="fa fa-info"></i><span class="activity-over">Başlamadı</span></li>
+												<li class="meta-user"><i class="fa fa-bolt"></i><a href="#">Eğitim</a></li>
+												<li class="meta_date"><i class="fa fa-user"></i><a href="#">Blackbox Security</a></li>
+												<li><a href="#"><i class="fa fa-map-signs"></i><span>Eğitim Fakültesi</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<p><a class="more_btn main-color" href="https://yinyang.omusiber.org">Detaylı bilgi..</a></p>
+								</div>
+							</article>
+						</div>
+						<div class="post-item">
+							<div class="timeline_date">
+									<span class="inner_date main-bg">
+										<span class="day">10</span>
+										<span class="month">Mart</span>
+									</span>
+								<span class="year">2018</span>
+							</div>
+							<article class="post-content">
+								<div class="post-image main-border bot-4-border">
+									<a href="#">
+										<img src="/assets/images/activities/omuctf18.jpg" alt="OMUCTF'18">
+									</a>
+								</div>
+								<div class="post-item-rit">
+									<div class="post-info-container">
+										<div class="post-info">
+											<h4><a href="#">OMUCTF'18</a></h4>
+											<ul class="post-meta">
+												<li><i class="fa fa-info"></i><span class="activity-over">Henüz başlamadı</span></li>
+												<li><i class="fa fa-bolt"></i><a href="#">Yarışma</a></li>
+												<li><i class="fa fa-user"></i><a href="#">OMUSiber</a></li>
+												<li><a href="#"><i class="fa fa-map-signs"></i><span>ctf.omusiber.org</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<p>OMUSiber tarafından poineTR'nin katkılarıyla hazırlanan OMUCTF'18 iki aşamalı gerçekleşecektir. Detaylı bilgi için: <a class="more_btn main-color" href="https://omusiber.org/ctf">omusiber.org/ctf</a></p>
+								</div>
+							</article>
+						</div>
+						<div class="post-item">
+							<div class="timeline_date">
+									<span class="inner_date main-bg">
+										<span class="day">21</span>
+										<span class="month">Ekim</span>
+									</span>
+								<span class="year">2017</span>
+							</div>
+							<article class="post-content">
+								<div class="post-image main-border bot-4-border">
+									<a href="#">
+										<img src="/assets/images/activities/pwnlydays.jpg" alt="Pwnlydays">
+									</a>
+								</div>
+								<div class="post-item-rit">
+									<div class="post-info-container">
+										<div class="post-info">
+											<h4><a href="#">Pwnlydays</a></h4>
+											<ul class="post-meta">
+												<li><i class="fa fa-info"></i><span class="activity-over">Bitti</span></li>
+												<li><i class="fa fa-bolt"></i><a href="#">Eğitim</a></li>
+												<li><i class="fa fa-user"></i><a href="#">Canyoupwnme</a></li>
+												<li><a href="#"><i class="fa fa-map-signs"></i><span>Mühendislik Fakültesi</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<p>Günümüzde yaşanan gelişmelerden sonra fiziksel olduğu kadar siber alanda da güvenliğin son derece önemli olduğu ortaya çıkmış ve bu konuda hassasiyet artmıştır. Malesef ki bu gelişim sürecinde Türkçe kaynak ve test ortamı gibi öğretici unsurlar oldukça azdır.  <a class="more_btn main-color" href="#">Devamını oku..</a></p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-    export default{
-        props: ['activities'],
-
-        data(){
-            return {
-
-            }
-        },
-
-        methods: {
-
-        }
-    }
+export default {
+    props: ['header']
+  
+}
 </script>
+

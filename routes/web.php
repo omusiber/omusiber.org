@@ -24,6 +24,7 @@ Route::get('activities','IndexController@activities');
 Route::get('subscribe','MembersController@newMember');
 Route::post('subscribe','MembersController@newMembertoDB');
 
+/* MEMBERS */
 Route::group(['prefix' => 'members', 'middleware' => 'admin'],function (){
     Route::get('','MembersController@index');
     Route::post('add','MembersController@addMembertoDB');
@@ -49,6 +50,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::delete('projects','AdminController@deleteProject');
     Route::get('activities','AdminController@activities');
     Route::post('activities','AdminController@activitiesPOST');
+    Route::post('activities/update','AdminController@activityUpdate');
     Route::delete('activities', 'AdminController@deleteActivity');
     Route::get('gallery','AdminController@gallery');
     Route::post('gallery','AdminController@galleryPOST');

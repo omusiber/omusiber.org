@@ -37,10 +37,5 @@
 
 @endpush
 @section('content')
-	<home></home>
-	<about header="{{ $titles->about_us }}" content="{{ $texts->about_us_body }}" :team="{{ $team }}"></about>
-	<home-projects header="{{ $titles->projects }}"></home-projects>
-	<home-activities header="{{ $titles->activities }}"></home-activities>
-	<home-subscribe header="{{ $titles->members }}" content="{!! $texts->subscribe_body !!}"></home-subscribe>
-	<contact header="{{ $titles->contact }}"></contact>
+	<site></site>
 @endsection

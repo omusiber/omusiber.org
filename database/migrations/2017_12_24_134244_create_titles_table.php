@@ -15,12 +15,13 @@ class CreateTitlesTable extends Migration
     {
         Schema::create('titles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('about_us',30)->default('Hakkımızda');
-            $table->string('projects',30)->default('Projelerimiz');
-            $table->string('activities',30)->default('Etkinliklerimiz');
-            $table->string('gallery',30)->default('Galeri');
-            $table->string('members',30)->default('Üyelerimiz');
-            $table->string('contact',30)->default('İletişim');
+            $table->string('about_us',30)->default('HAKKIMIZDA');
+            $table->string('calendar',30)->default('TAKVİM');
+            $table->string('projects',30)->default('PROJELERİMİZ');
+            $table->string('activities',30)->default('ETKİNLİKLERİMİZ');
+            $table->string('gallery',30)->default('GALERİ');
+            $table->string('members',30)->default('ÜYELİK');
+            $table->string('contact',30)->default('İLETİŞİM');
             $table->timestamps();
         });
     }

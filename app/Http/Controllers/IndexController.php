@@ -23,6 +23,16 @@ class IndexController extends Controller
         return view('index',compact('titles','texts', 'team', 'gallery'));
     }
 
+    public function api(){
+        $array = [];
+        $titles = Title::first();
+        $texts = Text::first();
+        $activities = Activity::all();
+        $projects = Project::all();
+        array_push($array, $titles, $texts, $activities, $projects);
+        return $array;
+    }
+
     public function store(Request $request){
         return Contact::create([
            'name' => $request->input('name'),
@@ -48,6 +58,12 @@ class IndexController extends Controller
     }
 
     public function testpage(){
-        return view('test');
+        /*$before = array('ı', 'ğ', 'ü', 'ş', 'ö', 'ç', 'İ', 'Ğ', 'Ü', 'Ö', 'Ç');
+        $after   = array('i', 'g', 'u', 's', 'o', 'c', 'i', 'g', 'u', 'o', 'c');
+        $url = str_replace($before, $after, $val);
+        $url = preg_replace('/[^a-zA-Z0-9 ]/', '', $url);
+        $url = preg_replace('!\s+!', '-', $url);
+        $url = strtolower(trim($url, '-'));
+        return $url;*/
     }
 }

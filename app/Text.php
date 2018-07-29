@@ -9,4 +9,8 @@ class Text extends Model
     protected $fillable = [
         'about_us_body', 'subscribe_body'
     ];
+
+    protected $hidden = [
+        'id', 'created_at', 'updated_at'
+    ];
 }

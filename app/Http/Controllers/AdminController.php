@@ -159,26 +159,46 @@ class AdminController extends Controller
 
     public function activitiesPOST(Request $request){
         $img_path = '';
+        $before = array('ı', 'ğ', 'ü', 'ş', 'ö', 'ç', 'İ', 'Ğ', 'Ü', 'Ö', 'Ç');
+        $after   = array('i', 'g', 'u', 's', 'o', 'c', 'i', 'g', 'u', 'o', 'c');
 
         if(Input::hasFile('image')){
             $img = Input::file('image');
             $img_path = str_replace(' ','',strtolower($request->input('name'))) . '.' . $img->getClientOriginalExtension();
             $img->move('assets/images/activities', $img_path);
+            $img_path = 'assets/images/activities/' . $img_path;
         }
-
-        $img_path = 'assets/images/activities/' . $img_path;
-
+        else {
+            $img_path = 'assets/images/activities/default.jpg';
+        }
+        $url = $request->input('name') . $request->input('date');
+        $url = str_replace($before, $after, $url);
+        $url = preg_replace('/[^a-zA-Z0-9 ]/', '', $url);
+        $url = preg_replace('!\s+!', '-', $url);
+        $url = strtolower(trim($url, '-'));
+        
         Activity::create([
             'activity_title' => $request->input('name'),
+            'url' => $url,
             'image_path' => $img_path,
-            'from' => $request->input('from'),
             'location' => $request->input('location'),
             'category' => $request->input('category'),
             'date' => $request->input('date'),
-            'state' => $request->input('state'),
             'short_description' => $request->input('short_desc'),
             'description' => $request->input('long_desc'),
         ]);
+    }
+
+    public function activityUpdate(Request $request){
+        $activity = Activity::where('url', $request->input('url'))->get()[0];
+        $activity->activity_title = $request->input('name');
+        $activity->location = $request->input('location');
+        $activity->category = $request->input('category');
+        $activity->short_description = $request->input('short_desc');
+        $activity->description = $request->input('long_desc');
+        $activity->date = $request->input('date');
+        $activity->save();
+        return $activity;
     }
 
     public function deleteActivity(Request $request){
