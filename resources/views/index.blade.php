@@ -41,7 +41,6 @@
 	<about header="{{ $titles->about_us }}" content="{{ $texts->about_us_body }}" :team="{{ $team }}"></about>
 	<home-projects header="{{ $titles->projects }}"></home-projects>
 	<home-activities header="{{ $titles->activities }}"></home-activities>
-	<site-gallery header="{{ $titles->gallery }}" :images="{{ $gallery }}"></site-gallery>
 	<home-subscribe header="{{ $titles->members }}" content="{!! $texts->subscribe_body !!}"></home-subscribe>
 	<contact header="{{ $titles->contact }}"></contact>
 @endsection

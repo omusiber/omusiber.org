@@ -13,7 +13,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<a class="bttn-unite bttn-lg bttn-primary" href="subscribe">Üye Ol</a>
+					<a class="bttn-unite bttn-lg bttn-primary" href="#">Üye Ol</a>
 				</div>
 			</div>
 		</div>
