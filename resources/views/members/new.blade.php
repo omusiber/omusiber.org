@@ -11,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
-    <link rel="shortcut icon" href="{{secure_asset('assets/images/favicon.ico')}}">
-    <link rel="stylesheet" href="{{secure_asset('assets/subscribe/css/subscribe.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('assets/subscribe/css/icono.min.css')}}">
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    <link rel="stylesheet" href="{{asset('assets/subscribe/css/subscribe.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/subscribe/css/icono.min.css')}}">
 </head>
 <body>
 <div id="progress"></div>
@@ -28,6 +28,6 @@
     </div>
 </div>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="{{secure_asset('assets/subscribe/js/subscribe.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/subscribe/js/subscribe.js')}}"></script>
 </body>
 </html>

@@ -2,9 +2,11 @@
     <div>
         <home></home>
         <about :header="titles.about_us" :content="texts.about_us_body"></about>
-        <home-calendar :header="titles.calendar" :allevents="events"></home-calendar>
+        <home-calendar header="TAKVİM" :allevents="events"></home-calendar>
         <home-projects :header="titles.projects"></home-projects>
+        <!--
         <home-activities :header="titles.activities"></home-activities>
+        -->
         <home-subscribe :header="titles.members" :content="texts.subscribe_body"></home-subscribe>
         <contact :header="titles.contact"></contact>
     </div>

@@ -16,7 +16,9 @@ use App\Doc;
 
 Route::get('/', 'IndexController@index');
 Route::post('/','IndexController@store');
-Auth::routes();
+Route::group(['prefix' => Config::get('app.loginUrl')], function() {
+    Auth::routes();
+});
 
 Route::get('projects','IndexController@projects');
 Route::get('activities','IndexController@activities');
@@ -52,9 +54,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::post('activities','AdminController@activitiesPOST');
     Route::post('activities/update','AdminController@activityUpdate');
     Route::delete('activities', 'AdminController@deleteActivity');
-    Route::get('gallery','AdminController@gallery');
-    Route::post('gallery','AdminController@galleryPOST');
-    Route::delete('gallery','AdminController@deletePhoto');
+    //Route::get('gallery','AdminController@gallery');
+    //Route::post('gallery','AdminController@galleryPOST');
+    //Route::delete('gallery','AdminController@deletePhoto');
     Route::get('members','AdminController@members');
     Route::get('categories','AdminController@categories');
 });

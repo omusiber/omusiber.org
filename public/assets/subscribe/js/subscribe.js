@@ -42,14 +42,14 @@ var questions = [
 
         // AJAX
 
-        /*$.ajax({
+        $.ajax({
             type:'POST',
             url:'/subscribe',
             data:{questions:questions},
             headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
-        });*/
+        });
 
         // add the h1 at the end with the welcome text
         var h1 = document.createElement('h1');

@@ -115,7 +115,6 @@ class AdminController extends Controller
         $content = Text::first();
         $content->about_us_body = $request->input('about_us_body');
         $content->save();
-        return true;
     }
 
     public function projects(){
